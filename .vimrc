@@ -24,6 +24,7 @@ Plug 'autoswap.vim'                     " Handle swap files intelligently
 "Plug 'AutoComplPop'                     " Auto Complete Popup
 Plug 'sheerun/vim-polyglot'             " Mega language support pack
 Plug 'ervandew/supertab'                " Autocomplete
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
@@ -31,7 +32,8 @@ if !has('nvim')
   set t_Co=256
 endif
 
-colorscheme harlequin
+"colorscheme harlequin
+colorscheme jellybeans
 
 set number                      " Show line number
 set relativenumber              " Show relative line number
@@ -143,7 +145,8 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-
+" Disabling all annoying bells
+set belloff=all
 " Plugin Settings
 
 "inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : <sid>"\<Tab>"
